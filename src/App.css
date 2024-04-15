@@ -1,20 +1,40 @@
-.header{
+.header {
     background-color: #001E39;
     color: white;
     display: flex;
     height: 60px;
     align-items: center;
-   
+    justify-content: center;
+    gap: 20px;
+
+
 }
-.logo{
+
+.logo {
+    width: 30px;
+    margin-left: 50px;
+    margin-right: 100px;
+    height: 30px;
+    /* justify-content: center; */
+}
+
+.panier {
+    width: 30px;
+    margin-right: 100px;
+
+}
+
+.user {
     width: 30px;
 }
-.user{
-    width: 30px;
-}
-.recherche{
+
+.recherche {
     width: 600px;
     height: 20px;
-    border-radius: 10px;
-   
+    border-radius: 15px;
+    height: 30px;
+    padding-left: 500px;
+}
+.nav_bar{
+    background-color: black;
 }
