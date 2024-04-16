@@ -1,11 +1,12 @@
 import React from "react";
 import Nav_bar from "./nav_bar";
+import Caroussel from "./caroussel";
 
 
 
 function Header() {
     return (
-        <>
+        <div>
             <div className="header">
                 <div><img src="src/fontend/images/images.png" className="logo"></img></div>
                 <div><input type="text" placeholder="Qu'est ce vous recherceher?" className="recherche" /></div>
@@ -14,8 +15,11 @@ function Header() {
                 <button>Sign Up</button>
                 <div><img src="src/fontend/icones/conversation-svgrepo-com.svg" alt="" className="panier" /></div>
             </div>
-<Nav_bar/>
-        </>
+            <div>
+                <Nav_bar />
+                <Caroussel />
+            </div>
+        </div>
     )
 }
 export default Header;
