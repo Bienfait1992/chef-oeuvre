@@ -16,7 +16,7 @@ function Footer() {
                 <div className=" justify-center text-white">
                     contact
                 </div>
-                <div className=" justify-center text-white">
+                <div className=" justify-center text-white h-60">
                     contact
                 </div>
             </div>

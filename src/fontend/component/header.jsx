@@ -17,7 +17,7 @@ function Header() {
             </div>
             <div>
                 <Nav_bar />
-                <Caroussel />
+                {/* <Caroussel /> */}
             </div>
         </div>
     )

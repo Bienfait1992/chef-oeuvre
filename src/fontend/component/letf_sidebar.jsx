@@ -9,7 +9,7 @@ function Left_sidebar() {
             <div className="bg-[#02518A] w-64 text-white justify-items-center justify-center">
                 Choisir une categorie
             </div>
-            <div className="h-80  border-solid border-inherit border] w-64 ml-2.5">
+            <div className="h-80  w-64 pl-2.5">
                     <a to="/cuisine">Cuisine</a>
                     <div><a to="/vetement">Vetements</a></div>
                     <div><a to="/decoration">Decoration</a></div>
