@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+NavLink
 
 
 
@@ -6,7 +8,7 @@ function Footer() {
     return (
         <div className="items-center justify-center">
             <div className="bg-[#02518A]  text-white">
-                <p>retour en haut</p>
+                <NavLink to="#">retour en haut</NavLink>
             </div>
             <div className="flex gap-2.5 bg-[#001E39]" >
 

@@ -1,11 +1,7 @@
 import React from "react";
-
-
-
-
-function Decoration(){
+function VetementF(){
     return(
         <></>
     )
 }
-export default Decoration;
+export default VetementF;

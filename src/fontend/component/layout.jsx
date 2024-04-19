@@ -3,6 +3,7 @@ import Header from "./header";
 import Footer from "./footer";
 import Left_sidebar from "./letf_sidebar";
 import Home from "./Home";
+import { Outlet } from "react-router-dom";
 
 
 
@@ -11,9 +12,10 @@ function Layout() {
     return (
         <>
             <Header />
-            <div className="flex">
+            <div className="flex gap-5 mt-3">
                 <Left_sidebar />
-                <Home />
+                <Outlet/>
+                {/* <Home/> */}
             </div>
             <Footer />
         </>

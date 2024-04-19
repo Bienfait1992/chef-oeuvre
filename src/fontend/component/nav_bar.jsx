@@ -1,5 +1,6 @@
 import React from "react";
 import { Router } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 function Nav_bar(){
@@ -7,8 +8,7 @@ function Nav_bar(){
         <>
          <div className="nav_bar">
          <ul>
-            <li>Accueil</li>
-            <li>Categorie</li>
+            <li><NavLink to={"/home"}>Accueil</NavLink></li>
             <li>Vendre sur Gat Store</li>
             <li>Livraison</li>
          </ul>
