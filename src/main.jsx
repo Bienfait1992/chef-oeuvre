@@ -17,6 +17,7 @@ import Telephone from './fontend/pages/telephone.jsx'
 import VetementH from './fontend/pages/vethome.jsx'
 import VetementF from './fontend/pages/vetfemme.jsx'
 import VetementE from './fontend/pages/vetenfant.jsx'
+import DetailsVth from './fontend/pages/detailsVtmh.jsx'
 
 
 
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
   {
     path: "/VetementE",
     element: <VetementE />
+  },
+  {
+    path: "/detailsVtmh",
+    element: <DetailsVth />
   },
 ]
     }
