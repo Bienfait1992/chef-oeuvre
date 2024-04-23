@@ -18,6 +18,10 @@ import VetementH from './fontend/pages/vethome.jsx'
 import VetementF from './fontend/pages/vetfemme.jsx'
 import VetementE from './fontend/pages/vetenfant.jsx'
 import DetailsVth from './fontend/pages/detailsVtmh.jsx'
+import SignIn from './fontend/pages/signin.jsx'
+import Livraison from './fontend/pages/livraison.jsx'
+import Panier from './fontend/pages/panier.jsx'
+import ListevetementH from './fontend/pages/listvetementH.jsx'
 
 
 
@@ -30,65 +34,85 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home />
       },
-      { 
-      path: "/signup",
-      element: <Signup />
-        },
-  {
-    path: "/cuisine",
-    element: <Cuisine />
-  },
-  {
-    path: "/vetement",
-    element: <Vetements />
-  },
-  {
-    path: "/meuble",
-    element: <Meuble />
-  },
-  {
-    path: "/electronique",
-    element: <Electronique />
-  },
-  {
-    path: "/montreB",
-    element: <MontreB />
-  },
-  {
-    path: "/decoration",
-    element: <Decoration />
-  },
-  {
-    path: "/informatique",
-    element: <Informatique />
-  },
-  {
-    path: "/bilokos",
-    element: <Bilokos />
-  },
-  {
-    path: "/telephone",
-    element: <Telephone />
-  },
-  {
-    path: "/VetementH",
-    element: <VetementH />
-  },
-  {
-    path: "/VetementF",
-    element: <VetementF />
-  },
-  {
-    path: "/VetementE",
-    element: <VetementE />
-  },
-  {
-    path: "/detailsVtmh",
-    element: <DetailsVth />
-  },
-]
-    }
-  ]);
+      {
+        path: "/signup",
+        element: <Signup />
+      },
+      {
+        path: "/signin",
+        element: <SignIn />
+      },
+      {
+        path: "/livraison",
+        element: <Livraison />
+      },
+      {
+        path: "/cuisine",
+        element: <Cuisine />
+      },
+      {
+        path: "/vetement",
+        element: <Vetements />
+      },
+      {
+        path: "/meuble",
+        element: <Meuble />
+      },
+      {
+        path: "/electronique",
+        element: <Electronique />
+      },
+      {
+        path: "/montreB",
+        element: <MontreB />
+      },
+      {
+        path: "/decoration",
+        element: <Decoration />
+      },
+      {
+        path: "/informatique",
+        element: <Informatique />
+      },
+      {
+        path: "/bilokos",
+        element: <Bilokos />
+      },
+      {
+        path: "/telephone",
+        element: <Telephone />
+      },
+      {
+        path: "/",
+        element: <VetementH />,
+        children :[
+          {
+            path: "/listevetementH", 
+            element: <ListevetementH /> 
+          },
+          {
+            path: "/VetementH/:id", 
+            element: <DetailsVth /> 
+          },
+
+        ]
+      },
+      {
+        path: "/VetementF",
+        element: <VetementF />
+      },
+      {
+        path: "/VetementE",
+        element: <VetementE />
+      },
+      {
+        path: "/panier",
+        element: <Panier />
+      },
+      
+    ]
+  }
+]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />

@@ -9,14 +9,14 @@ function Home() {
             <div className=" mt-3  ml-2.5 flex gap-5">
 
 
-                <div className=" border-solid border-inherit border rounded-xl mb-5">
+                <div className=" border-solid border-inherit border rounded-xl mb-5 text-center">
                     <div className="bg-[#02518A] text-white  ">
-                        Montre & Vetement
+                        <p >Montre & Vetement</p>
                     </div>
                     <div className="">
                         <div className="flex gap-3.5 m-2.5">
                             <div className=""><img src="src/fontend/images/images (3).jpeg" alt="" />
-                            <NavLink to="/VetementH">Homme</NavLink>    
+                            <NavLink to="/listevetementH">Homme</NavLink>    
                             </div>
                             <div className=""><img src="src/fontend/images/images (20).jpeg" alt="" />
                             <NavLink to="/montreB">Montre</NavLink>  
@@ -38,7 +38,7 @@ function Home() {
 
 
                 {/* Bloque meuble */}
-                <div className=" border-solid border-inherit border rounded-xl mb-5">
+                <div className=" border-solid border-inherit border rounded-xl mb-5 text-center">
         <div className="bg-[#02518A] text-white  ">
             Montre & Vetement
         </div>
@@ -48,7 +48,7 @@ function Home() {
                 <NavLink to="/meuble">Meuble Salon</NavLink> 
                 </div>
                 <div className=""><img src="src/fontend/images/imagesmeubles/images (12).jpeg" alt="" />
-                <NavLink to="/meuble">Meuble Chambre</NavLink> 
+                <NavLink to="/meuble">Meuble ChambreÒ</NavLink> 
                 </div>
             </div>
             <div className="flex gap-3.5 m-2.5">
@@ -71,7 +71,7 @@ function Home() {
 
                 {/* Bloc cuisine */}
 
-                <div className=" border-solid border-inherit border rounded-xl mb-5 mt-4">
+                <div className=" border-solid border-inherit border rounded-xl mb-5 mt-4 text-center">
                     {
                         DataCuisine.map((element) => (
                             <>
@@ -108,7 +108,7 @@ function Home() {
 
 {/* //Bloque electronique */}
 
-                <div className=" border-solid border-inherit border rounded-xl mb-5 mt-4">
+                <div className=" border-solid border-inherit border rounded-xl mb-5 mt-4 text-center">
 
                     {
                         Dataelectronique.map((element) => (

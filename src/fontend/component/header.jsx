@@ -8,14 +8,14 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
     return (
-        <div>
+        <div className="ml-10">
             <div className="header">
-                <div><img src="src/fontend/images/images.png" className="logo"></img></div>
-                <div><input type="text" placeholder="Qu'est ce vous recherceher?" className="recherche" /></div>
-                <div><img src="src/fontend/icones/user_11129843.png" className="user"></img></div>
-                <NavLink to={"/"}><button>Sign in</button></NavLink>
-                <NavLink to={"/signup"}><button>Sign Up</button></NavLink>
-                <div><img src="src/fontend/icones/conversation-svgrepo-com.svg" alt="" className="panier" /></div>
+                <div><NavLink to={"/home"}><img src="src/fontend/images/images.png" className="logo"></img></NavLink></div>
+                <div><input type="text" placeholder=" rechercehe" className="w-96 rounded-xl h-8" /></div>
+                <div><img src="src/fontend/images/user/user_8484075.png" className="user"></img></div>
+                <NavLink to={"/signin"}><button>Sign in</button></NavLink>
+                <NavLink to={"/signup"}><button className="bg-[#ffffff] rounded-xl text-black p-3">Sign Up</button></NavLink>
+                <div><NavLink to={"/panier"}><img src="src/fontend/icones/conversation-svgrepo-com.svg" alt="" className="w-8" /></NavLink></div>
             </div>
             <div>
                 <Nav_bar />

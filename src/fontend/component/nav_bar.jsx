@@ -10,7 +10,7 @@ function Nav_bar(){
          <ul>
             <li><NavLink to={"/home"}>Accueil</NavLink></li>
             <li>Vendre sur Gat Store</li>
-            <li>Livraison</li>
+            <li><NavLink to={"/livraison"}>Livraison</NavLink></li>
          </ul>
          
          </div>
