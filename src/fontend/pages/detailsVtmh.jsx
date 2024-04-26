@@ -2,6 +2,7 @@ import React from "react";
 import { DataVtmh } from "../datas/data_vetementH/data_vetementH";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 function DetailsVth() {
   const { id } = useParams();
@@ -10,22 +11,120 @@ function DetailsVth() {
   // console.log(data);
   const product = data.find((e) => e.id === parseInt(id));
   // console.log(product);
-
+  const [count, setCount] = useState(1);
   return (
     <div>
-    <div className="border-solid border-inherit border rounded-xl mb-5 w-96 justify-center items-center pt-20">
-      <div>
-        <img src={product.avatar1} className="m-auto mt-5" />
+      <div className="flex">
+        <div className="border-solid border-inherit border rounded-xl mb-5 w-96 justify-center items-center pt-20">
+          <img src={product.avatar1} className="m-auto mt-5" />
+        </div>
+
+        <div>
+          <div className="ml-20 mb-10">{product.description}</div>
+          <div className="ml-20 mb-4 ">
+            <span className="">Prix:</span>
+            <span className="ml-14">{product.prix}$</span>
+          </div>
+
+          <div className="ml-20 mb-4 flex">
+            <span>Quantité:</span>
+            <div className="flex ml-5 ">
+
+              
+                <button
+                  className=" text-black  p-2 border-solid border-inherit border"
+                  onClick={function () {
+                    setCount(count - 1)
+                    ;
+                  }}
+                  disabled={count===1}
+                >
+                  -
+                </button>
+             
+              <div>
+                <input
+                  type="text"
+                  className="text-black    p-2 border-solid border-inherit border text-center w-16 "
+                  value={count}
+                ></input>
+              </div>
+              <div>
+                <button
+                  className=" text-black  p-2 border-solid border-inherit border"
+                  onClick={function () {
+                    setCount(count + 1);
+                  }}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="">
+            <div className="ml-20 mb-44">
+              {" "}
+              Couleur :
+              <button>
+                <span className="mr-2  text-black m-5 p-2 border-solid border-inherit border ">
+                  Noir
+                </span>
+              </button>
+              <button>
+                <span className="mr-2 text-black m-5 p-2 border-solid border-inherit border">
+                  Rouge
+                </span>
+              </button>
+              <button>
+                <span className="mr-2 text-black m-5 p-2 border-solid border-inherit border">
+                  Blue
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="ml-20">{product.description}</div>
-      <div className="ml-20">
-        <span>prix:</span>
-        {product.prix}
+
+      <div className="flex">
+        <div>
+          <NavLink to={"/panier"}>
+            <button className="bg-[#E64C3C] rounded-xl text-white h-10 w-96 ">
+              Ajouter au panier
+            </button>
+          </NavLink>
+        </div>
+
+
+        <div className=" mb-20 ml-20 p-2  flex justify-items-center">
+          <div className="font-bold text-2xl bg-[#E64C3C] p-1 text-white">Sous Total:</div>
+          <div className="border-solid border-[#E64C3C] border"><input type="text" value={count*product.prix} className="text-center items-center mt-2 "/></div>
+        </div>
       </div>
-      
-    </div>
-   <NavLink to={"/panier"}><button className="bg-[#E64C3C] rounded-xl text-white h-10 w-96">Ajouter au panier</button></NavLink> 
     </div>
   );
 }
 export default DetailsVth;
+
+// import React, { useState } from "react";
+// export function Icone({ imagesvg, classeimage }) {
+
+//     const [count, setCount] = useState(0);
+//     return (
+//         <>
+
+//             <div className={classeimage} >
+//                 <div>
+//                     <svg width="81" height="34" viewBox="0 0 75 34" fill="" xmlns="http://www.w3.org/2000/svg" onClick={function(){
+//                         setCount(count+1)
+//                     }} >
+//                         <rect width="34" height="34" rx="17" fill="" />
+//                         <path d={imagesvg} fill="#6E767D" />
+//                     </svg>
+//                 </div>
+
+//                <p>{count}</p>
+//             </div>
+//         </>
+//     )
+// }

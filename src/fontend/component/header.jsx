@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
     return (
-        <div className="ml-10">
+        <div className="">
             <div className="header">
                 <div><NavLink to={"/home"}><img src="src/fontend/images/images.png" className="logo"></img></NavLink></div>
                 <div><input type="text" placeholder=" rechercehe" className="w-96 rounded-xl h-8" /></div>
