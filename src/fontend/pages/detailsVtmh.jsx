@@ -3,20 +3,34 @@ import { DataVtmh } from "../datas/data_vetementH/data_vetementH";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import usePanier from "../component/store";
 
 function DetailsVth() {
+  const updatedCart = usePanier((state) => state.updatedCart);
+  const cart = usePanier((state) => state.cart);
+
+  // updatedCart = product;
+  // cart = [updatedCart];
+
   const { id } = useParams();
   // console.log(id);
   const data = DataVtmh;
   // console.log(data);
   const product = data.find((e) => e.id === parseInt(id));
   // console.log(product);
+
+  const handleClick = () => {
+    alert("le produit a été ajouter dans le panier");
+    updatedCart("banane");
+  };
+  console.log("cart : ", cart);
+
   const [count, setCount] = useState(1);
   return (
     <div>
-      <div className="flex">
+      <div className="flex mb-20">
         <div className="border-solid border-inherit border rounded-xl mb-5 w-96 justify-center items-center pt-20">
-          <img src={product.avatar1} className="m-auto mt-5" />
+          <img src={product.avatar1} className="m-auto mb-14" />
         </div>
 
         <div>
@@ -29,19 +43,16 @@ function DetailsVth() {
           <div className="ml-20 mb-4 flex">
             <span>Quantité:</span>
             <div className="flex ml-5 ">
+              <button
+                className=" text-black  p-2 border-solid border-inherit border"
+                onClick={function () {
+                  setCount(count - 1);
+                }}
+                disabled={count === 1}
+              >
+                -
+              </button>
 
-              
-                <button
-                  className=" text-black  p-2 border-solid border-inherit border"
-                  onClick={function () {
-                    setCount(count - 1)
-                    ;
-                  }}
-                  disabled={count===1}
-                >
-                  -
-                </button>
-             
               <div>
                 <input
                   type="text"
@@ -63,7 +74,7 @@ function DetailsVth() {
           </div>
 
           <div className="">
-            <div className="ml-20 mb-44">
+            <div className="ml-20 mb-10">
               {" "}
               Couleur :
               <button>
@@ -82,49 +93,65 @@ function DetailsVth() {
                 </span>
               </button>
             </div>
+
+            <div className="ml-20">
+              Tails :
+              <button>
+                <span className="mr-2  text-black m-5 p-2 border-solid border-inherit border ">
+                  S
+                </span>
+              </button>
+              <button>
+                <span className="mr-2 text-black m-5 p-2 border-solid border-inherit border">
+                  M
+                </span>
+              </button>
+              <button>
+                <span className="mr-2 text-black m-5 p-2 border-solid border-inherit border">
+                  L
+                </span>
+              </button>
+              <button>
+                <span className="mr-2 text-black m-5 p-2 border-solid border-inherit border">
+                  XL
+                </span>
+              </button>
+              <button>
+                <span className="mr-2 text-black m-5 p-2 border-solid border-inherit border">
+                  XXL
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="flex">
         <div>
-          <NavLink to={"/panier"}>
-            <button className="bg-[#E64C3C] rounded-xl text-white h-10 w-96 ">
-              Ajouter au panier
-            </button>
-          </NavLink>
+          {/* <NavLink to="/panier"> */}
+          <button
+            className="bg-[#E64C3C] rounded-xl text-white h-10 w-96 "
+            onClick={handleClick}
+          >
+            Ajouter au panier
+          </button>
+          {/* </NavLink> */}
         </div>
 
-
         <div className=" mb-20 ml-20 p-2  flex justify-items-center">
-          <div className="font-bold text-2xl bg-[#E64C3C] p-1 text-white">Sous Total:</div>
-          <div className="border-solid border-[#E64C3C] border"><input type="text" value={count*product.prix} className="text-center items-center mt-2 "/></div>
+          <div className="font-bold text-2xl bg-[#E64C3C] p-1 text-white">
+            Sous Total:
+          </div>
+          <div className="border-solid border-[#E64C3C] border">
+            <input
+              type="text"
+              value={count * product.prix}
+              className="text-center items-center mt-2 "
+            />
+          </div>
         </div>
       </div>
     </div>
   );
 }
 export default DetailsVth;
-
-// import React, { useState } from "react";
-// export function Icone({ imagesvg, classeimage }) {
-
-//     const [count, setCount] = useState(0);
-//     return (
-//         <>
-
-//             <div className={classeimage} >
-//                 <div>
-//                     <svg width="81" height="34" viewBox="0 0 75 34" fill="" xmlns="http://www.w3.org/2000/svg" onClick={function(){
-//                         setCount(count+1)
-//                     }} >
-//                         <rect width="34" height="34" rx="17" fill="" />
-//                         <path d={imagesvg} fill="#6E767D" />
-//                     </svg>
-//                 </div>
-
-//                <p>{count}</p>
-//             </div>
-//         </>
-//     )
-// }

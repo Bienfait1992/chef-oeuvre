@@ -22,6 +22,7 @@ import SignIn from './fontend/pages/signin.jsx'
 import Livraison from './fontend/pages/livraison.jsx'
 import Panier from './fontend/pages/panier.jsx'
 import ListevetementH from './fontend/pages/listvetementH.jsx'
+import Apropos from './fontend/pages/apropos.jsx'
 
 
 
@@ -94,9 +95,14 @@ const router = createBrowserRouter([
             path: "/VetementH/:id", 
             element: <DetailsVth /> 
           },
-
+          
         ]
       },
+      // {
+      //   path: "/detailsVth/:id", 
+      //   element: <Panier /> 
+      // },
+      
       {
         path: "/VetementF",
         element: <VetementF />
@@ -108,6 +114,10 @@ const router = createBrowserRouter([
       {
         path: "/panier",
         element: <Panier />
+      },
+      {
+        path: "/apropos",
+        element: <Apropos />
       },
       
     ]

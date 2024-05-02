@@ -10,8 +10,11 @@ function Livraison() {
                 <div className="flex">
                     <div className="mb-3.5 ">
                         <div className="mb-12 mt-2"><label>Votre Nom</label></div>
-                        <div className="mb-12"><label>Adresse</label></div>
-                        <div className="mb-12"><label>Telephone</label></div>
+                        <div className="mb-12"><label>commune</label></div>
+                        <div className="mb-12"><label>Rue</label></div>
+                        <div className="mb-12"><label>Mobile1</label></div>
+                        <div className="mb-12"><label>Mobile2</label></div>
+                        <div className="mb-12"><label>Reference</label></div>
 
                     </div>
 
@@ -50,7 +53,10 @@ function Livraison() {
                         </div>
 
                         {/* <div className="mb-8"><input type="select" placeholder="Mettez votre Adresse" className="border border-black ml-2.5 w-96 gap-3 h-10" /></div> */}
-                        <div><input type="text" placeholder="Mettez votre telephone  ici" className="border border-black ml-2.5 w-96 h-10" /></div>
+                        <div><input type="text" placeholder=" Indiquer votre rue de residence  ici ici" className="border border-black ml-2.5 w-96 h-10 mb-7" /></div>
+                        <div><input type="text" placeholder="Telephone 1" className="border border-black ml-2.5 w-96 h-10 mb-9" /></div>
+                        <div><input type="text" placeholder="Telephone 2" className="border border-black ml-2.5 w-96 h-10 mb-8" /></div>
+                        <div><input type="text" placeholder="Reference" className="border border-black ml-2.5 w-96 h-10" /></div>
                     </div>
                 </div>
             </form>
