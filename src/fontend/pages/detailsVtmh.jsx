@@ -3,12 +3,10 @@ import { DataVtmh } from "../datas/data_vetementH/data_vetementH";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import usePanier from "../component/store";
+import { usePanier } from "../component/store";
 
 function DetailsVth() {
-  const updatedCart = usePanier((state) => state.updatedCart);
-  const cart = usePanier((state) => state.cart);
-
+  const { updateCart, cart } = usePanier();
   // updatedCart = product;
   // cart = [updatedCart];
 
@@ -21,9 +19,10 @@ function DetailsVth() {
 
   const handleClick = () => {
     alert("le produit a été ajouter dans le panier");
-    updatedCart("banane");
+    const updatedCart = [product, ...cart];
+    updateCart(updatedCart);
+    console.log(cart);
   };
-  console.log("cart : ", cart);
 
   const [count, setCount] = useState(1);
   return (

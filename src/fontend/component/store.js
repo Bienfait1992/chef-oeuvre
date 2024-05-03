@@ -1,11 +1,21 @@
 import { create } from "zustand";
-import { DataVtmh } from "../datas/data_vetementH/data_vetementH";
-import { useParams } from "react-router-dom";
+// import { DataVtmh } from "../datas/data_vetementH/data_vetementH";
+// import { useParams } from "react-router-dom";
+import { useState } from "react";
 
-const usePanier = create((set) => ({
+export const usePanier = create((set) => ({
+  //   email: "georgesakake",
   cart: [],
-  updateCart: (newProduct) =>
-    set((state) => ({ cart: [...state.cart, newProduct] })),
+  // updateCart: (updatedCart) => {
+  //   set({ cart: updatedCart });
+  // },
+  updateCart(updatedCart) {
+    set({ cart: updatedCart });
+  },
 }));
-
-export default usePanier;
+// export const globaleStore = () =>{
+//   usePanier.setState((state) =>({cart: state.cart}))
+// }
+// // export const newproduit = () => {
+// //   usePanier.setState((state) => ({ cart: state.cart.push("gloire") }));
+// // };

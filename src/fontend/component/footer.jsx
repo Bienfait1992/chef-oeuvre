@@ -1,12 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import ScrollToTopPage from "./scroll";
+
 NavLink;
 
 function Footer() {
   return (
     <div className="text-center">
       <div className="bg-[#02518A]  text-white">
-        <NavLink to="#">retour en haut</NavLink>
+        <ScrollToTopPage />
+        {/* <NavLink to="#">retour en haut</NavLink> */}
       </div>
       <div className="flex gap-2.5 bg-[#001E39] justify-center items-center  text-white h-60">
         <div className="">
@@ -20,8 +23,8 @@ function Footer() {
           <div className="text-gray-400">Tel : 00243 827127764</div>
           <div className="text-gray-400">E-mail : georgesakake@gmail.com</div>
         </div>
-        <div className="ml-56" >
-         <div className="mb-8 font-bold text-2xl">Mode de paiement</div> 
+        <div className="ml-56">
+          <div className="mb-8 font-bold text-2xl">Mode de paiement</div>
           <div className="flex gap-3 ">
             <div>
               <NavLink>
@@ -57,13 +60,13 @@ function Footer() {
 
       <div className="bg-[#001E39]  border-solid border-white border-t-[1px]  h-20 ">
         <div className="">
-        <NavLink to={"/home"}>
-          <img
-            src="src/fontend/images/images.png"
-            alt=""
-            className="w-8 m-auto mt-5"
-          />
-        </NavLink>
+          <NavLink to={"/home"}>
+            <img
+              src="src/fontend/images/images.png"
+              alt=""
+              className="w-8 m-auto mt-5"
+            />
+          </NavLink>
         </div>
       </div>
     </div>
