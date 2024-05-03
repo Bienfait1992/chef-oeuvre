@@ -18,7 +18,7 @@ function Panier() {
   const { cart } = usePanier();
   return (
     <div className=" m-auto">
-      <div className="font-bold text-6xl">Panier</div>
+      <div className="font-bold text-5xl">Panier</div>
 
       <div className="flex gap-20 bg-white border border-gray-400 mb-10 ">
         <div className="m-2 ml-36 text-gray-400">Nom et details Produit</div>
