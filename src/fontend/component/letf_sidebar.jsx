@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 function Left_sidebar() {
     return (
-        <div className="w-64   ">
+        <div className="w-64 bg-gray-100   ">
             <div className="bg-[#02518A] w-64 text-white justify-items-center justify-center">
                 <p className="text-center">Choisir une categorie</p>
             </div>

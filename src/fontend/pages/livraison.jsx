@@ -4,7 +4,7 @@ import React from "react";
 
 function Livraison() {
     return (
-        <div className="border-solid border-inherit border rounded-xl mb-5 ml-96 p-3 justify-center ">
+        <div className="border-solid border-inherit border rounded-xl mb-5 ml-72 p-3 justify-center ">
             <div className="ml-44 text-[#E64C3C] mb-5 text-2xl"><p>Votre adrese de livraison</p></div>
             <form action="gap-3 p-3 justify-center flex">
                 <div className="flex">

@@ -12,7 +12,7 @@ function Header() {
             <img src="src/fontend/images/images.png" className="logo"></img>
           </NavLink>
         </div>
-        <div>
+        <div className="ml-60 mr-12">
           <input type="text" placeholder=" rechercehe" className=" input" />
           <button className="recherche ">Recherche</button>
         </div>
@@ -26,12 +26,12 @@ function Header() {
           <button>Sign in</button>
         </NavLink>
         <NavLink to={"/signup"}>
-          <button className="bg-[#ffffff] rounded-xl text-black p-3">
+          <button className="bg-[#ffffff] rounded-xl text-black p-1">
             Sign Up
           </button>
         </NavLink>
-        <div className="">
-          <NavLink to={"/panier"}><img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1716356968/images1_fh81yv.png" className="border rounded-xl w-12"/></NavLink>
+        <div className="ml-20">
+          <NavLink to={"/panier"}><img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1716356968/images1_fh81yv.png" className="border rounded-xl w-10"/></NavLink>
         </div>
       </div>
       <div>
