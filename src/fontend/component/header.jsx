@@ -30,8 +30,8 @@ function Header() {
             Sign Up
           </button>
         </NavLink>
-        <div className="bg-white border rounded-2xl text-black">
-          <NavLink to={"/panier"}>panier</NavLink>
+        <div className="">
+          <NavLink to={"/panier"}><img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1716356968/images1_fh81yv.png" className="border rounded-xl w-12"/></NavLink>
         </div>
       </div>
       <div>

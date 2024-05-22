@@ -15,8 +15,9 @@ function Home() {
                     </div>
                     <div className="">
                         <div className="flex gap-3.5 m-2.5">
-                            <div className=""><img src="src/fontend/images/images (3).jpeg" alt="" />
-                            <NavLink to="/listevetementH">Homme</NavLink>    
+                            <div className="">
+                            <NavLink to="/listevetementH"> <img src="src/fontend/images/images (3).jpeg" alt="" />
+                            Homme</NavLink>    
                             </div>
                             <div className=""><img src="src/fontend/images/images (20).jpeg" alt="" />
                             <NavLink to="/montreB">Montre</NavLink>  
