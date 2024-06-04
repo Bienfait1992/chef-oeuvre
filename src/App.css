@@ -16,7 +16,7 @@ body{
     background-color: #001E39;
     color: white;
     display: flex;
-    height: 60px;
+    height: 70px;
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -25,13 +25,18 @@ body{
 
 
 }
+.relative{
+    height: 200px;
+    width: 100px; ;
+}
 
 .logo {
-    width: 30px;
+    width: 65px;
     /* margin-left: 50px; */
     /* margin-right: 100px; */
-    height: 30px;
+    height: 65px;
     /* justify-content: center; */
+    border-radius: 50px;
 }
 
 /* .panier {
@@ -47,7 +52,7 @@ body{
     height: 40px;
     border-radius: 15px 0 0 15px ;
     padding: 5px;
-    width: 500px;
+    width: 700px;
     color: black;
      
 }
@@ -76,6 +81,57 @@ body{
     height: 100px;
 } */
 .sous :hover{
-    background-color: #02518A;
+    background-color: rgb(172, 165, 165);
     color: white;
 }
+
+.carousel-container img{
+   width: 100%;
+   height: auto;
+   /* border: black solid 2px; */
+   margin: auto;
+  /* padding: 5px; */
+   
+}
+
+
+
+.menu    {
+    position: relative;
+    
+      } 
+.deroulant:hover  {
+  background-color:rgb(172, 165, 165) ;
+  cursor: pointer;
+    } 
+.sousmenu{
+   margin-left: 245px;
+   padding: 15px;
+   display: none;
+   width: 100%;
+   position: absolute;
+} 
+
+
+  .sousmenu a {
+    color:black;
+   margin-left: 70px;
+ } 
+ .deroulant{
+   display: flex;
+   
+ } 
+  .menu:hover  .sousmenu   {
+    display: block;
+      } 
+.deroulant .sousmenu  {
+       display: flex;
+          } 
+.flexmenu{
+    display: flex;
+} 
+.flecheindex{
+    margin-left: 150px;
+} 
+
+

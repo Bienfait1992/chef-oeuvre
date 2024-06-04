@@ -23,8 +23,19 @@ function DetailsVth() {
     updateCart(updatedCart);
     console.log(cart);
   };
-
+const buttonClick1 = () =>{
+  setClicked(true);
+};
+const buttonClick2 = () =>{
+  setClicked(blue);
+};
+const buttonDeclic = () =>{
+  setClicked(false);
+  // alert:{"double ckliquer pour deselectioner"}
+};
   const [count, setCount] = useState(1);
+
+  const [clicked, setClicked] = useState(false);
   return (
     <div>
       <div className="flex mb-20">
@@ -76,18 +87,18 @@ function DetailsVth() {
             <div className="ml-20 mb-10">
               {" "}
               Couleur :
-              <button>
-                <span className="mr-2  text-black m-5 p-2 border-solid border-inherit border ">
+              <button >
+                <span className="mr-2  text-black m-5 p-2 border-solid border-inherit border " style={{ backgroundColor: clicked ? 'red' : 'white', color: 'black' }}>
                   Noir
                 </span>
               </button>
-              <button>
-                <span className="mr-2 text-black m-5 p-2 border-solid border-inherit border">
+              <button id="1" onClick={buttonClick1} onDoubleClick={buttonDeclic} >
+                <span className="mr-2 text-black m-5 p-2 border-solid border-inherit border"    style={{ backgroundColor: clicked ? 'red' : 'white', color: 'black' }} disabled={clicked}>
                   Rouge
                 </span>
               </button>
-              <button>
-                <span className="mr-2 text-black m-5 p-2 border-solid border-inherit border">
+              <button id="2">
+                <span className="mr-2 text-black m-5 p-2 border-solid border-inherit border"  >
                   Blue
                 </span>
               </button>

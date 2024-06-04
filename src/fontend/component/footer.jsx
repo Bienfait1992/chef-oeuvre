@@ -62,9 +62,9 @@ function Footer() {
         <div className="">
           <NavLink to={"/home"}>
             <img
-              src="src/fontend/images/images.png"
+              src="https://res.cloudinary.com/dk2apwxms/image/upload/v1717436768/GAT_2_v0iiyg.png"
               alt=""
-              className="w-8 m-auto mt-5"
+              className="w-16 m-auto mt-2 rounded-full"
             />
           </NavLink>
         </div>

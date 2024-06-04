@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 function Home() {
     return (
         <div className=" gap-5">
-            <div className=" mt-3  ml-2.5 flex gap-5">
+            <div className="   ml-2.5 flex gap-5">
 
 
                 <div className=" border-solid border-inherit border rounded-xl mb-5 text-center">

@@ -41,7 +41,8 @@ const ScrollToTopPage = () => {
               d="M5 10l7-7m0 0l7 7m-7-7v18"
             />
           </svg> */}
-          retour en haut
+  
+          <img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1717436747/fleche_xzxu7b.png" alt="" className="w-8 mt-2" />
         </button>
       )}
     </div>

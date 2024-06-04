@@ -1,19 +1,44 @@
-import React from "react";
-// import { Splide, SplideSlide } from '@splidejs/react-splide';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import React from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
- function Caroussel() {
-  
-  return (
-    <Carousel  autoPlay interval={3000} infiniteLoop thumbWidth={0} showIndicators={false} showStatus={false} >
+const Carousel = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false
+
     
-      <img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1714493309/images_1_veio41.jpg" className="relative"></img>
-      <img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1714493399/images_bavv0z.jpg" alt="" className="relative"/>
+  };
 
+  return (
+    <div className="carousel-container">
       
-    </Carousel>
+      <Slider {...settings}>
+        <div>
+          <img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1717446227/FR_Hero_store_desktop_1500x300_tlykqi.png" alt="Slide 1" className='taille'/>
+        </div>
+        <div>
+          <img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1717446227/FR_Hero_store_desktop_1500x300_tlykqi.png" alt="Slide 2" />
+        </div>
+        <div>
+          <img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1717446227/FR_Hero_store_desktop_1500x300_tlykqi.png" alt="Slide 3" />
+        </div>
+        <div>
+          <img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1717446227/FR_Hero_store_desktop_1500x300_tlykqi.png" alt="Slide 4" />
+        </div>
+        <div>
+          <img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1717446227/FR_Hero_store_desktop_1500x300_tlykqi.png" alt="Slide 5" />
+        </div>
+      </Slider>
+    </div>
   );
-}
-export default Caroussel;
+};
+
+export default Carousel;
 

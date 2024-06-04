@@ -9,10 +9,10 @@ function Header() {
       <div className="header">
         <div>
           <NavLink to={"/home"}>
-            <img src="src/fontend/images/images.png" className="logo"></img>
+            <img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1717436768/GAT_2_v0iiyg.png" className="logo"></img>
           </NavLink>
         </div>
-        <div className="ml-60 mr-12">
+        <div className="ml-44 mr-12">
           <input type="text" placeholder=" rechercehe" className=" input" />
           <button className="recherche ">Recherche</button>
         </div>
@@ -23,20 +23,22 @@ function Header() {
           ></img>
         </div>
         <NavLink to={"/signin"}>
-          <button>Sign in</button>
+          <button className="  text-white">Sign in</button>
         </NavLink>
         <NavLink to={"/signup"}>
-          <button className="bg-[#ffffff] rounded-xl text-black p-1">
+          <button className=" border rounded-2xl text-white p-1">
             Sign Up
           </button>
         </NavLink>
         <div className="ml-20">
-          <NavLink to={"/panier"}><img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1716356968/images1_fh81yv.png" className="border rounded-xl w-10"/></NavLink>
+          <NavLink to={"/panier"}><img src="https://res.cloudinary.com/dk2apwxms/image/upload/v1716356968/images1_fh81yv.png" className="border rounded-full w-10" /></NavLink>
         </div>
       </div>
       <div>
         <Nav_bar />
-        {/* <Caroussel /> */}
+        <div className="">
+          <Caroussel />
+        </div>
       </div>
     </div>
   );
